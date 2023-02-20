@@ -50,13 +50,6 @@ export default {
         getLoadContext: () => ({cache, session, waitUntil, storefront, env}),
       });
 
-      // const {
-      //   createRequestHandler,
-      // } = require("@remix-run/vercel");
-      // module.exports = createRequestHandler({
-      //   build: require("./build"),
-      // });
-
       const response = await handleRequest(request);
 
       if (response.status === 404) {
