@@ -9,11 +9,7 @@ import {getLocaleFromRequest} from '~/lib/utils';
  * Export a fetch handler in module format.
  */
 export default {
-  async fetch(
-    request: Request,
-    env: Env,
-    executionContext: ExecutionContext,
-  ): Promise<Response> {
+  async fetch(request, env, executionContext) {
     try {
       /**
        * Open a cache instance in the worker and a custom session instance.
@@ -22,7 +18,7 @@ export default {
         throw new Error('SESSION_SECRET environment variable is not set');
       }
 
-      const waitUntil = (p: Promise<any>) => executionContext.waitUntil(p);
+      const waitUntil = (p) => executionContext.waitUntil(p);
       const [cache, session] = await Promise.all([
         caches.open('hydrogen'),
         HydrogenSession.init(request, [env.SESSION_SECRET]),

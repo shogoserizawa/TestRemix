@@ -9,8 +9,7 @@
     "dev:css": "postcss styles --base styles --dir app/styles -w",
     "preview": "npm run build && shopify hydrogen preview",
     "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx .",
-    "format": "prettier --write --ignore-unknown .",
-    "typecheck": "tsc --noEmit"
+    "format": "prettier --write --ignore-unknown ."
   },
   "prettier": "@shopify/prettier-config",
   "dependencies": {
@@ -38,13 +37,9 @@
     "@remix-run/dev": "1.12.0",
     "@remix-run/eslint-config": "1.12.0",
     "@shopify/eslint-plugin": "^42.0.1",
-    "@shopify/oxygen-workers-types": "^3.17.2",
     "@shopify/prettier-config": "^1.1.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
-    "@types/eslint": "^8.4.10",
-    "@types/react": "^18.0.20",
-    "@types/react-dom": "^18.0.6",
     "concurrently": "^7.4.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.20.0",
@@ -55,8 +50,7 @@
     "postcss-preset-env": "^7.8.2",
     "prettier": "^2.8.4",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.9.5"
+    "tailwindcss": "^3.1.8"
   },
   "engines": {
     "node": ">=16.13"
